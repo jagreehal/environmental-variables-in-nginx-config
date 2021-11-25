@@ -3,11 +3,11 @@ version: '2'
 services:
   proxy:
     build: .
-    volumes:
-      - ./templates:/etc/nginx/templates
+    # volumes:
+    #   - ./templates:/etc/nginx/templates
     environment:
-      # - CLASSIC_PASS=https://news.ycombinator.com/
-      - CLASSIC_PASS=https://bbc.co.uk/
+      - CLASSIC_PASS=https://news.ycombinator.com/
+      # - CLASSIC_PASS=https://bbc.co.uk/
       - NGINX_PORT=80
     ports:
       - '8080:80'    
